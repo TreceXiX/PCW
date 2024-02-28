@@ -1,3 +1,6 @@
+/* FUENTES WEB */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -13,6 +16,10 @@ body > header {
 
 body > nav {
   background-color: rgb(163, 244, 152);
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
   > ul {
     /*display: none;*/
     max-height: 0;
@@ -68,6 +75,7 @@ body > footer {
 }
 
 body {
+  font-family: "Josefin Sans", sans-serif;
   min-width: 360px;
 
   > section {
@@ -114,6 +122,12 @@ body {
 
     display: flex;
     justify-content: space-evenly;
+
+    > li > a {
+      > span:last-of-type {
+        display: none;
+      }
+    }
   } /*
   body > nav > ul > li {
     display: inline-block;
@@ -128,15 +142,18 @@ body {
         background-color: white;
         display: inline-block;
         /*width: 45%;*/
-        width: calc(50% - 1em);
+        width: calc(50% - 2em);
         margin: 0.5em;
       }
     }
   }
 }
 
-@media all and (width >= 600px) {
+@media all and (width >= 610px) {
   body > section > div > article {
     width: calc(33% - 1em);
+  }
+  body > nav > ul > li > a > span:last-of-type {
+    display: inline-block;
   }
 }

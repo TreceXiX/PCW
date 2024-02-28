@@ -1,0 +1,11 @@
+form {
+  width: 20em;
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    display: inline-block;
+    width: 6em;
+  }
+}

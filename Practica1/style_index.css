@@ -1,0 +1,116 @@
+.margen0 {
+  margin: 0;
+  padding: 0.5em;
+  text-align: center;
+}
+
+body {
+  min-width: 360px;
+}
+
+header {
+  margin: 0;
+  padding: 0.5em;
+  background-color: yellow;
+  border: solid;
+  text-align: center;
+}
+
+nav {
+  padding: 0.5em;
+  background-color: rgb(0, 0, 0);
+
+  > ul {
+    max-height: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+
+    > li > a {
+      display: block;
+      padding: 0.2em;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+
+      &:hover {
+        background-color: rgb(0, 0, 0);
+        color: rgb(224, 224, 21);
+      }
+    }
+  }
+  > label {
+    color: white;
+    cursor: pointer;
+  }
+  > input {
+    display: none;
+    &:checked ~ ul {
+      max-height: 10em;
+    }
+  }
+}
+
+section {
+  border: solid;
+  background-color: rgb(90, 240, 251);
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+}
+
+section h4 {
+  text-align: center;
+}
+
+section footer {
+  text-align: center;
+}
+
+#footer {
+  background-color: rgb(16, 103, 170);
+  border: solid;
+}
+
+/* REGLAS MEDIAQUERY */
+@media all and (width >= 500px) {
+  body > nav > label {
+    display: none;
+  }
+  body > nav > ul {
+    max-height: 1.5em;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  body > section {
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      > article {
+        background-color: white;
+        display: inline-block;
+        /*width: 45%;*/
+        width: calc(50% - 1em);
+        margin: 0.5em;
+      }
+    }
+  }
+}
+
+@media all and (width >= 600px) {
+  body > section > div > article {
+    width: calc(33% - 1em);
+  }
+}
