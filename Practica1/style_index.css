@@ -82,6 +82,9 @@ section {
     display: flex;
     flex-direction: column;
 
+    > a {
+      text-decoration: none;
+    }
     img {
       display: block;
       margin: 0 auto;
@@ -95,28 +98,52 @@ section {
       }
     }
 
-    > p {
-      flex-grow: 1;
+    > a > h4 {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: rgb(29, 4, 255);
     }
 
     > footer {
-      background-color: rgb(220, 220, 69);
+      padding: 100.5 em;
+      background-color: rgb(252, 95, 48);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: white;
 
-      > p {
-        margin: 0;
-        padding: 0.5em;
-        text-align: center;
+      > div {
+        display: flex;
+        align-items: center;
+        margin: 0.5em;
       }
     }
   }
 }
 
-section h4 {
-  text-align: center;
+#section-footer {
+  display: flex; /* Utilizamos flexbox para alinear los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  margin-top: 20px; /* Espacio superior */
+  background-color: #f0f0f0; /* Color de fondo del footer */
+  padding: 10px; /* Espacio interno del footer */
+  border-top: solid;
 }
 
-section footer {
-  text-align: center;
+#show-more-button {
+  padding: 10px 20px; /* Padding del botón */
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Quita el borde del botón */
+  border-radius: 5px; /* Borde redondeado del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  margin-left: 10px; /* Espacio a la izquierda del botón */
+}
+
+#show-more-button:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar sobre el botón */
 }
 
 #footer {
