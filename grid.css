@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  grid-template-rows: repeat(3, 1fr); /* Tres filas de igual tamaño */
+  gap: 10px; /* Espacio entre celdas */
+
+  /* Asignar áreas a los elementos */
+  grid-template-areas:
+    "item1 item2"
+    "item1 item3"
+    "item1 item3";
+}
+
+.item {
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.item1 {
+  grid-area: item1;
+}
+
+.item2 {
+  grid-area: item2;
+}
+
+.item3 {
+  grid-area: item3;
+}
+
+/* Cambios de diseño para pantallas más pequeñas */
+@media (max-width: 600px) {
+  .container {
+    grid-template-areas:
+      "item1 item1"
+      "item2 item3"
+      "item2 item3";
+  }
+}

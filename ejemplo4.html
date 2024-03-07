@@ -11,11 +11,57 @@
     <form>
       <div>
         <label for="usu">Usuario:</label>
-        <input type="text" name="Usuario" id="usu" />
+        <input
+          type="text"
+          name="Usuario"
+          id="usu"
+          autofocus
+          pattern="^[a-zA-Z][a-zA-z0-9]{4,19}$"
+          minlength="5"
+          maxlength="20"
+          required
+          list="lista"
+        />
+
+        <datalist></datalist>
       </div>
       <div>
         <label for="pwd">Password:</label>
         <input type="password" id="pwd" />
+      </div>
+      <div>
+        <label for="tlf"> Teléfono</label>
+        <input
+          type="text"
+          name=""
+          tlf
+          id="tlf"
+          placeholder="Formato: 621-345-678 "
+        />
+      </div>
+      <div>
+        <label for="">Valor:</label>
+        <input type="number" min="1" max="10" step="1" />
+      </div>
+      <div>
+        <label for="">Texto</label>
+        <textarea></textarea>
+      </div>
+      <div>
+        <label for="">Dificultad</label>
+        <select name="dif" id="">
+          <option value="1">Baja</option>
+          <option value="2">Media</option>
+          <option value="3">Alta</option>
+        </select>
+      </div>
+      <div>
+        <label for="foto">Cargar foto:</label>
+        <input type="file" id="foto" accept="image/*" />
+      </div>
+      <div class="botonera">
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpiar" />
       </div>
     </form>
   </body>

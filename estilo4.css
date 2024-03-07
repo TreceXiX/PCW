@@ -3,6 +3,31 @@ form {
   > div {
     display: flex;
     flex-direction: column;
+
+    input:hover,
+    input:focus {
+      background-color: rgb(221, 221, 221);
+    }
+
+    textarea {
+      width: 20em;
+      height: 5em;
+    }
+  }
+  > div.botonera {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #foto {
+    display: none;
+  }
+
+  label[for="foto"] {
+    &:hover {
+      box-shadow: 0 0 5 px #000000;
+    }
+    cursor: pointer;
   }
   label {
     display: inline-block;

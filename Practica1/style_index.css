@@ -15,6 +15,28 @@
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#btnArriba {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  z-index: 1;
+  font-size: 1em;
+  background-color: #000000;
+  border: 0.1em solid #000000;
+  color: rgb(254, 254, 254);
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  font-weight: bolder;
+  text-decoration: none;
+  &:hover {
+    box-shadow: 2px 2px 4px #eaff00;
+  }
+}
+
 body {
   min-width: 360px;
   font-family: "Josefin Sans", sans-serif;
@@ -66,7 +88,7 @@ nav {
   }
 }
 
-section {
+#secindex {
   border: solid;
   background-color: rgb(106, 208, 208);
 
@@ -106,7 +128,6 @@ section {
     }
 
     > footer {
-      padding: 100.5 em;
       background-color: rgb(252, 95, 48);
       display: flex;
       flex-wrap: wrap;
@@ -164,6 +185,197 @@ body > footer {
   a {
     color: rgb(255, 255, 255);
     font-weight: bold;
+  }
+}
+
+/*REGLAS RECETA.HTML*/
+#secreceta {
+  border: solid;
+  background-color: rgb(106, 208, 208);
+  > h3 {
+    background-color: white;
+    margin: 0.5em;
+    border: solid;
+  }
+
+  > p {
+    margin: 0.5em;
+  }
+
+  > #contentinfo {
+    background-color: rgb(244, 249, 149);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: rgb(0, 0, 0);
+    padding: 0.5em;
+    margin: 0em 4.5em 0.5em 4.5em;
+    border: solid;
+  }
+
+  > #contentarticles {
+    display: grid;
+    gap: 0.5em; /* Espacio entre celdas */
+
+    /* Asignar áreas a los elementos */
+    grid-template-areas:
+      "item1 item2"
+      "item1 item3"
+      "item4 item5";
+    background-color: #305986;
+    /* grid-template-areas: ; */
+    > #contentfotos {
+      grid-area: item1;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+      > img {
+        display: block;
+        margin: 1.5em auto;
+        width: 300px;
+        height: auto;
+      }
+      > p {
+        text-align: center;
+      }
+      > #carrusel {
+        display: flex;
+        justify-content: center;
+        > input {
+          margin: 0.5em;
+        }
+      }
+    }
+    > #contentetiquetas {
+      grid-area: item2;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+
+      > .aetiqueta {
+        display: block;
+        padding: 0.5em;
+        margin: 0.5em;
+      }
+    }
+
+    > #contentingredientes {
+      grid-area: item3;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+      > ul > li {
+        margin-bottom: 1.5em;
+      }
+    }
+    > #contentlaboracion {
+      grid-area: item4;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+      > p {
+        padding: 0.5em;
+      }
+    }
+    > #contentcomentarios {
+      grid-area: item5;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+      > p {
+        padding: 1em;
+        margin: 0.5em;
+        background-color: rgb(233, 233, 130);
+        text-align: center;
+        border-top: solid;
+        border-bottom: solid;
+      }
+      > form {
+        background-color: rgb(222, 222, 222);
+        margin: 0.5em;
+        padding: 0.5em;
+        border-radius: 0.5em;
+        > div {
+          display: flex;
+          flex-direction: column;
+          margin: 0.5em;
+          > label {
+            margin-bottom: 0.3em;
+          }
+        }
+        #bcomentario {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          > input {
+            margin: 0.5em;
+          }
+        }
+      }
+      > div {
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        margin: 0.5em;
+
+        > h5 {
+          margin: 0.5em;
+          padding: 0.5em;
+        }
+        > p {
+          margin: 0.5em;
+          padding: 0.5em;
+        }
+        > .cinfo {
+          border: solid 0.1em;
+          display: flex;
+          justify-content: space-between;
+          padding: 0.5em;
+          background-color: rgb(248, 248, 72);
+        }
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    > #contentarticles {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
