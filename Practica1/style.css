@@ -1,0 +1,750 @@
+/* FUENTES WEB */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  box-sizing: border-box;
+}
+.margen0 {
+  margin: 0;
+  padding: 0.5em;
+  text-align: center;
+}
+
+#logotipo {
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#btnArriba {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  z-index: 1;
+  font-size: 1em;
+  background-color: #000000;
+  border: 0.1em solid #000000;
+  color: rgb(254, 254, 254);
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  font-weight: bolder;
+  text-decoration: none;
+  &:hover {
+    box-shadow: 2px 2px 4px #eaff00;
+  }
+}
+
+body {
+  min-width: 360px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+header {
+  background-image: url(Imagenes/fondo.png);
+  border: solid;
+  text-align: center;
+}
+
+nav {
+  padding: 0.5em;
+  background-color: rgb(0, 0, 0);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  > ul {
+    max-height: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+
+    > li > a {
+      display: block;
+      padding: 0.2em;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+
+      &:hover {
+        background-color: rgb(0, 0, 0);
+        color: rgb(224, 224, 21);
+      }
+    }
+  }
+  > label {
+    color: white;
+    cursor: pointer;
+  }
+  > input {
+    display: none;
+    &:checked ~ ul {
+      max-height: 10em;
+    }
+  }
+}
+
+#secindex {
+  border: solid;
+  border-top: none;
+  background-color: rgb(106, 208, 208);
+  > h3 {
+    background-color: white;
+    padding: 0.5em;
+    border-bottom: solid;
+  }
+  > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 0.5 em;
+  }
+  article {
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+    > a {
+      text-decoration: none;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      max-height: 100%;
+
+      transition: transform 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.25);
+      }
+    }
+
+    > a > h4 {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: rgb(29, 4, 255);
+    }
+
+    > footer {
+      background-color: rgb(252, 95, 48);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: white;
+
+      > div {
+        display: flex;
+        align-items: center;
+        margin: 0.5em;
+      }
+    }
+  }
+}
+
+#section-footer {
+  display: flex; /* Utilizamos flexbox para alinear los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  margin-top: 20px; /* Espacio superior */
+  background-color: #f0f0f0; /* Color de fondo del footer */
+  padding: 10px; /* Espacio interno del footer */
+  border-top: solid;
+}
+
+#show-more-button {
+  padding: 10px 20px; /* Padding del botón */
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Quita el borde del botón */
+  border-radius: 5px; /* Borde redondeado del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  margin-left: 10px; /* Espacio a la izquierda del botón */
+}
+
+#show-more-button:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar sobre el botón */
+}
+
+#footer {
+  padding: 0.5em;
+  background-color: rgb(16, 103, 170);
+  border: solid;
+}
+
+.footercontenedor {
+  display: flex;
+  justify-content: space-between;
+}
+
+body > footer {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+
+  a {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+}
+
+/*REGLAS RECETA.HTML*/
+#secreceta {
+  border: solid;
+  background-color: rgb(106, 208, 208);
+  > h3 {
+    background-color: white;
+    margin: 0.5em;
+    border: solid;
+  }
+
+  > p {
+    margin: 0.5em;
+  }
+
+  > #contentinfo {
+    background-color: rgb(244, 249, 149);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: rgb(0, 0, 0);
+    padding: 0.5em;
+    margin: 0em 4.5em 0.5em 4.5em;
+    border: solid;
+  }
+
+  > #contentarticles {
+    display: grid;
+    gap: 0.5em; /* Espacio entre celdas */
+
+    /* Asignar áreas a los elementos */
+    grid-template-areas:
+      "item1 item2"
+      "item1 item3"
+      "item4 item5";
+    background-color: #305986;
+    /* grid-template-areas: ; */
+    > #contentfotos {
+      grid-area: item1;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+      > img {
+        display: block;
+        margin: 1.5em auto;
+        width: 300px;
+        height: auto;
+      }
+      > p {
+        text-align: center;
+      }
+      > #carrusel {
+        display: flex;
+        justify-content: center;
+        > input {
+          margin: 0.5em;
+        }
+      }
+    }
+    > #contentetiquetas {
+      grid-area: item2;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+
+      > .aetiqueta {
+        display: block;
+        padding: 0.5em;
+        margin: 0.5em;
+      }
+    }
+
+    > #contentingredientes {
+      grid-area: item3;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+      > ul > li {
+        margin-bottom: 1.5em;
+      }
+    }
+    > #contentlaboracion {
+      grid-area: item4;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+      > p {
+        padding: 0.5em;
+      }
+    }
+    > #contentcomentarios {
+      grid-area: item5;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+      > p {
+        padding: 1em;
+        margin: 0.5em;
+        background-color: rgb(233, 233, 130);
+        text-align: center;
+        border-top: solid;
+        border-bottom: solid;
+      }
+      > form {
+        /* Estilo para cuando el mouse está sobre el input */
+        input:hover {
+          border: 2px solid #95a5a6; /* Cambia el color del borde cuando el mouse está sobre el input */
+        }
+
+        /* Estilo para cuando el input tiene el foco */
+        input:focus {
+          border: 2px solid #3498db; /* Cambia el color del borde cuando tiene el foco */
+          outline: none; /* Quita el contorno predeterminado */
+          box-shadow: 0 0 5px #3498db; /* Añade una sombra cuando tiene el foco */
+        }
+        background-color: rgb(222, 222, 222);
+        margin: 0.5em;
+        padding: 0.5em;
+        border-radius: 0.5em;
+        > div {
+          display: flex;
+          flex-direction: column;
+          margin: 0.5em;
+          > label {
+            margin-bottom: 0.3em;
+          }
+        }
+        #bcomentario {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          > input {
+            margin: 0.5em;
+          }
+        }
+      }
+      > div {
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        margin: 0.5em;
+
+        > h5 {
+          margin: 0.5em;
+          padding: 0.5em;
+        }
+        > p {
+          margin: 0.5em;
+          padding: 0.5em;
+        }
+        > .cinfo {
+          border: solid 0.1em;
+          display: flex;
+          justify-content: space-between;
+          padding: 0.5em;
+          background-color: rgb(248, 248, 72);
+        }
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    > #contentarticles {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+/*REGLAS BUSCAR.HTML*/
+#contenedorbuscar {
+  display: grid;
+  gap: 0.5em; /* Espacio entre celdas */
+  /* Asignar áreas a los elementos */
+  grid-template-areas: "item1 item2";
+  > #secbuscar {
+    grid-area: item1;
+    > h4 {
+      text-align: center;
+      background-color: rgb(221, 205, 205);
+      padding: 0.5em;
+      border: solid;
+    }
+    > #contenedorfiltro {
+      /* Estilo para cuando el mouse está sobre el input */
+      input:hover {
+        border: 2px solid #95a5a6; /* Cambia el color del borde cuando el mouse está sobre el input */
+      }
+
+      /* Estilo para cuando el input tiene el foco */
+      input:focus {
+        border: 2px solid #3498db; /* Cambia el color del borde cuando tiene el foco */
+        outline: none; /* Quita el contorno predeterminado */
+        box-shadow: 0 0 5px #3498db; /* Añade una sombra cuando tiene el foco */
+      }
+      background-color: rgb(222, 222, 222);
+      margin: 0.5em;
+      padding: 0.5em;
+      border-radius: 0.5em;
+      > div {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5em;
+        > label {
+          margin-bottom: 0.3em;
+        }
+      }
+      > #bbuscar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        > input {
+          margin: 0.5em;
+        }
+      }
+    }
+  }
+  > #secindex {
+    grid-area: item2;
+  }
+}
+
+/*Reglas para registro.html*/
+.section_registro {
+  font-family: Arial, sans-serif;
+  background-color: rgb(106, 208, 208);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  /* Estilo para cuando el mouse está sobre el input */
+  input:hover {
+    border: 2px solid #95a5a6; /* Cambia el color del borde cuando el mouse está sobre el input */
+  }
+
+  /* Estilo para cuando el input tiene el foco */
+  input:focus {
+    border: 2px solid #3498db; /* Cambia el color del borde cuando tiene el foco */
+    outline: none; /* Quita el contorno predeterminado */
+    box-shadow: 0 0 5px #3498db; /* Añade una sombra cuando tiene el foco */
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto; /* Cambié width a auto para que se ajuste al contenido */
+    align-self: center; /* Alineado a la izquierda: flex-start */
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+}
+
+/*Reglas para login.html*/
+.section_login {
+  font-family: Arial, sans-serif;
+  background-color: rgb(106, 208, 208);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  /* Estilo para cuando el mouse está sobre el input */
+  input:hover {
+    border: 2px solid #95a5a6; /* Cambia el color del borde cuando el mouse está sobre el input */
+  }
+
+  /* Estilo para cuando el input tiene el foco */
+  input:focus {
+    border: 2px solid #3498db; /* Cambia el color del borde cuando tiene el foco */
+    outline: none; /* Quita el contorno predeterminado */
+    box-shadow: 0 0 5px #3498db; /* Añade una sombra cuando tiene el foco */
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto; /* Cambié width a auto para que se ajuste al contenido */
+    align-self: center; /* Alineado a la izquierda: flex-start */
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+}
+
+#secnueva {
+  border: solid;
+  background-color: rgb(106, 208, 208);
+  /* Estilo para cuando el mouse está sobre el input */
+  input:hover {
+    border: 2px solid #95a5a6; /* Cambia el color del borde cuando el mouse está sobre el input */
+  }
+
+  /* Estilo para cuando el input tiene el foco */
+  input:focus {
+    border: 2px solid #3498db; /* Cambia el color del borde cuando tiene el foco */
+    outline: none; /* Quita el contorno predeterminado */
+    box-shadow: 0 0 5px #3498db; /* Añade una sombra cuando tiene el foco */
+  }
+  > h3 {
+    background-color: white;
+    margin: 0.5em;
+    border: solid;
+  }
+
+  > #contentarticles {
+    display: grid;
+    gap: 0.5em; /* Espacio entre celdas */
+
+    /* Asignar áreas a los elementos */
+    grid-template-areas:
+      "item1 item4"
+      "item1 item4"
+      "item3 item5";
+    background-color: #305986;
+    > #contentfotos {
+      grid-area: item4;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+      > img {
+        display: block;
+        margin: 1.5em auto;
+        width: 300px;
+        height: auto;
+      }
+
+      > #descripcion {
+        display: flex;
+        flex-direction: column;
+        resize: none;
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+    > #contentetiquetas {
+      grid-area: item3;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+
+      > form {
+        padding: 0.5em;
+      }
+    }
+
+    > #contentformulario {
+      grid-area: item1;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+
+      > #nuevareceta-form {
+        padding: 0.5em;
+      }
+    }
+    > #contentreceta {
+      grid-area: item5;
+      background-color: white;
+      border: solid;
+      margin: 0.5em;
+      > h4 {
+        background-color: grey;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: solid;
+        text-align: center;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5em;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    > #contentarticles {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+#secacerca {
+  border: solid;
+  background-color: rgb(106, 208, 208);
+  > h3 {
+    background-color: white;
+    margin: 0.5em;
+    border: solid;
+  }
+  #acerca_contenido {
+    margin: 0.5em;
+  }
+
+  @media (max-width: 600px) {
+    > #contentarticles {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+/* REGLAS MEDIAQUERY */
+@media all and (width >= 500px) {
+  body > nav > label {
+    display: none;
+  }
+  body > nav > ul {
+    max-height: 1.5em;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    > li > a {
+      > span:last-of-type {
+        display: none;
+      }
+    }
+  } /*
+  body > nav > ul > li {
+    display: inline-block;
+  }*/
+}
+
+@media all and (width >= 610px) {
+  body > nav > ul > li > a > span:last-of-type {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 600px) {
+  #contenedorbuscar {
+    display: flex;
+    flex-direction: column;
+  }
+}

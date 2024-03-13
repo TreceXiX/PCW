@@ -1,20 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estilo_ind.css" />
-    <title>Cocina: Indice</title>
-    <h1></h1>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/fontello.css" />
+    <title>Acerca de</title>
   </head>
-  <header>
-    <div id="logotipo-container">
-      <a href="index.html"
-        ><img id="logotipo" src="/Practica1/Imagenes/logo.png" alt="Logotipo"
-      /></a>
-    </div>
-  </header>
   <body>
-    <h1>ESTAS EN ACERCA</h1>
+    <header>
+      <img src="Imagenes/logotipo.png" alt="" id="logotipo" />
+      <h1>SABOR IBÉRICO</h1>
+      <h2>Recetas Españolas</h2>
+    </header>
+    <nav>
+      <input type="checkbox" id="chkMenu" />
+      <label for="chkMenu">&equiv;</label>
+      <ul>
+        <li>
+          <a href="index.html"
+            ><span class="icon-home"></span><span>Inicio</span></a
+          >
+        </li>
+        <li>
+          <a href="buscar.html"
+            ><span class="icon-search"></span><span>Buscar</span></a
+          >
+        </li>
+        <li>
+          <a href="login.html"
+            ><span class="icon-login"></span><span>Login</span></a
+          >
+        </li>
+        <li>
+          <a href="index.html"
+            ><span class="icon-logout"></span><span>Logout</span></a
+          >
+        </li>
+        <li>
+          <a href="registro.html"
+            ><span class="icon-user-plus"></span><span>Registro</span></a
+          >
+        </li>
+        <li>
+          <a href="nueva.html"
+            ><span class="icon-doc-text"></span><span>Nueva Receta</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <a href="#top" id="btnArriba">&#8682;</a>
+    <section id="secacerca">
+      <h3 class="margen0">Acerca de</h3>
+      <div id="contentarticles">
+        <article id="acerca_contenido">
+          <h4>Generalidades</h4>
+          <p>Práctica 1 | Ingeniería Multimedia | Programación Cliente Web</p>
+          <p>Juan José Cárdenas Palacios - Y8002792W - jjcp9@alu.ua.es</p>
+          <p>Sergio Marín - 49339062Z - smg188@alu.ua.es</p>
+
+          <h4>Información del proyecto</h4>
+          <p>
+            Nuestra práctica consiste en una página web estática con el objetivo
+            de mostrar recetas de comida española. Consta de una cantidad
+            establecida de páginas con su funcionalidad especifica. Las páginas
+            se dividen en diferentes archivos HTML, que son:
+          </p>
+          <ul>
+            <li>
+              "index.html" donde estará el menú principal mostrando así todas
+              las recetas
+            </li>
+            <li>
+              "buscar.html" donde con un buscador permite buscar por nombre una
+              receta en especifico
+            </li>
+            <li>"nueva.html" permite crear una nueva receta</li>
+            <li>
+              "receta.html" permite mostrar los detalles completos de una receta
+              en especifico, como imagenes extra, o la receta en si
+            </li>
+            <li>"login.html" permite al usuario acceder a su cuenta</li>
+            <li>
+              "registro.html" permite a un usuario registrarse y hacer login
+            </li>
+            <li>"acerca.html" que muestra información sobre el proyecto.</li>
+          </ul>
+
+          <p>
+            Estos archivos están diseñados para que sus estilos estén separados
+            del código en un archivo css llamado "style_index.css" donde se
+            estructuró de la mejor manera para que sea legible. Este orden es
+            jerarquico.
+          </p>
+          <p>
+            Además, la página es perfectamente compatible en dispositivos con
+            diferentes tamaños de pantalla, permitiendo poder llegar, si no a
+            todos, a la mayoría de usuarios.
+          </p>
+          <p>
+            Hemos podido comprobar que el problema más frecuente que hubo en el
+            diseño de la práctica fue el tema del media-query y como hacer que
+            la página sea completamente compatible con la mayoría de pantallas.
+          </p>
+
+          <h4>Autoevaluación</h4>
+          <p>
+            Consideramos que hemos completado con éxito (si no hubo un despiste)
+            todos los puntos solicitados en la práctica 1. Por lo que creemos
+            que merecemos un <strong>10</strong>.
+          </p>
+        </article>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="footercontenedor">
+        <div><a href="acerca.html">© PCW 2024</a></div>
+        <div>Sergio Marín & Juan José Cárdenas</div>
+      </div>
+    </footer>
   </body>
 </html>

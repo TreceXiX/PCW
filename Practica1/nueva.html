@@ -1,20 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estilo_ind.css" />
-    <title>Cocina: Indice</title>
-    <h1></h1>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/fontello.css" />
+    <title>Nueva receta</title>
   </head>
-  <header>
-    <div id="logotipo-container">
-      <a href="index.html"
-        ><img id="logotipo" src="/Practica1/Imagenes/logo.png" alt="Logotipo"
-      /></a>
-    </div>
-  </header>
   <body>
-    <h1>ESTAS EN Nueva</h1>
+    <header>
+      <img src="Imagenes/logotipo.png" alt="" id="logotipo" />
+      <h1>SABOR IBÉRICO</h1>
+      <h2>Recetas Españolas</h2>
+    </header>
+
+    <nav>
+      <input type="checkbox" id="chkMenu" />
+      <label for="chkMenu">&equiv;</label>
+      <ul>
+        <li>
+          <a href="index.html"
+            ><span class="icon-home"></span><span>Inicio</span></a
+          >
+        </li>
+        <li>
+          <a href="buscar.html"
+            ><span class="icon-search"></span><span>Buscar</span></a
+          >
+        </li>
+        <li>
+          <a href="login.html"
+            ><span class="icon-login"></span><span>Login</span></a
+          >
+        </li>
+        <li>
+          <a href="index.html"
+            ><span class="icon-logout"></span><span>Logout</span></a
+          >
+        </li>
+        <li>
+          <a href="registro.html"
+            ><span class="icon-user-plus"></span><span>Registro</span></a
+          >
+        </li>
+        <li>
+          <a href="nueva.html"
+            ><span class="icon-doc-text"></span><span>Nueva Receta</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <a href="#top" id="btnArriba">&#8682;</a>
+    <section id="secnueva">
+      <h3 class="margen0">Crea una nueva receta</h3>
+      <div id="contentarticles">
+        <article id="contentformulario">
+          <h4>Información básica de la receta</h4>
+          <form id="nuevareceta-form">
+            <label for="nomReceta">Nombre de la receta:</label>
+            <br />
+            <input
+              type="text"
+              id="nomReceta"
+              name="nomReceta"
+              maxlength="100"
+              required
+            />
+            <br /><br />
+            <!--Recuerda ponerle las condiciones-->
+            <label for="tiempoPreparacion"
+              >Tiempo de preparación (minutos):</label
+            >
+            <br />
+            <input
+              type="number"
+              id="tiempoPreparacion"
+              name="tiempoPreparacion"
+              min="1"
+              max="600"
+              required
+            />
+            <br /><br />
+            <label for="numPersonas">Número de personas:</label>
+            <br />
+            <select id="numPersonas" name="numPersonas" required>
+              <option value="" disabled selected>Número de personas</option>
+              <option value="Una">1</option>
+              <option value="Dos">2</option>
+              <option value="Tres">3</option>
+              <option value="Cuatro">4</option>
+              <option value="Cinco">5</option>
+              <option value="Seis">6</option>
+              <option value="Siete">7</option>
+              <option value="Ocho">8</option>
+              <option value="Nueve">9</option>
+              <option value="Diez">10</option>
+            </select>
+            <br /><br />
+            <label>Dificultad </label>
+            <br />
+            <label>(Baja - Media - Alta):</label>
+            <br />
+            <input
+              type="range"
+              name="rango"
+              min="0"
+              max="2"
+              list="lista-rango"
+            />
+            <datalist id="lista-rango">
+              <option value="0" label="Baja"></option>
+              <option value="1" label="Media"></option>
+              <option value="2" label="Alta"></option>
+            </datalist>
+
+            <br /><br />
+            <h2>Ingredientes</h2>
+            <label for="ingredienteInput">Ingrediente:</label>
+            <br />
+            <input
+              type="text"
+              id="ingredienteInput"
+              placeholder="Ingrese un ingrediente"
+            />
+            <input type="button" value="+" />
+            <ul>
+              <li>Ternera <strong>x</strong></li>
+              <li>Harina de Trigo <strong>x</strong></li>
+              <li>Huevo <strong>x</strong></li>
+              <li>Jamón Serrano <strong>x</strong></li>
+              <li>Lonchas de Queso <strong>x</strong></li>
+            </ul>
+            <div>
+              <input type="submit" value="Confirmar" />
+              <button type="reset">Limpiar</button>
+            </div>
+          </form>
+        </article>
+        <article id="contentfotos">
+          <h4>Añade fotos</h4>
+          <img src="Imagenes/noimage.png" alt="Sin foto" />
+          <hr />
+          <div id="imagenes">
+            <label for="imagen">Seleccionar imagen:</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*" />
+            <label>Borrar foto seleccionada</label>
+            <input type="button" value="Delete" />
+          </div>
+          <h3>Descripción de la imagen:</h3>
+          <form id="descripcion">
+            <textarea
+              name="descripcionImagen"
+              id="descripcionImagen"
+              cols="50"
+              rows="5"
+              maxlength="200"
+              placeholder="Escribe un comentario para la foto"
+            ></textarea>
+            <button type="reset">Limpiar descripción</button>
+          </form>
+        </article>
+        <article id="contentetiquetas">
+          <h4>Etiquetas</h4>
+          <form>
+            <input
+              type="text"
+              id="etiquetaInput"
+              list="etiquetasList"
+              placeholder="Ingrese una etiqueta"
+            />
+            <datalist id="etiquetasList">
+              <option value="etiqueta1">Etiqueda en datalist1</option>
+              <option value="etiqueta2">Etiqueda en datalist2</option>
+            </datalist>
+            <input type="button" value="+" /><br /><br />
+            <label>Lista de etiquetas:</label><br />
+            <div id="etiquetaList">
+              <br /><label>etiqueta 1 <strong>x</strong> </label><br />
+              <br /><label>etiqueta 2 <strong>x</strong> </label>
+            </div>
+          </form>
+        </article>
+        <article id="contentreceta">
+          <h4>Receta completa</h4>
+          <div>
+            <textarea
+              id="txtAreaReceta"
+              rows="10"
+              placeholder="Escribe la elabolarción de la receta"
+              required
+            ></textarea>
+          </div>
+        </article>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="footercontenedor">
+        <div><a href="acerca.html">© PCW 2024</a></div>
+        <div>Sergio Marín & Juan José Cárdenas</div>
+      </div>
+    </footer>
   </body>
 </html>
